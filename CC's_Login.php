@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC's Login Page</title>
+    <!-- link to the external css file -->
+    <link rel="stylesheet" href="CC's.css">
+    <!-- link to the external JavaScript file; defer to wait to run the JavaScript code until all of the HTML elements have loaded -->
+     <script src="CC's.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <?php include 'CCs_menu.php'; ?>
+        <h1>Login to your Employee Account</h1>
+    </header>
+    <main>
+       <!-- we need a form with at least 2 inputs - 1 should use the password input -->
+       <div id="divMsg"></div>
+
+  <form name="frmLogin" id="frmLogin" action="CC's_Login.php" method= "post" onsubmit="return validateLoginForm();">
+
+   <div>
+    <label for="txtName">User Name:</label>
+    <input type="text" id="txtName" name="txtName">
+   </div>
+
+   <div>
+    <label for="txtPassword">Password:</label>
+    <input type="password" id="txtPassword" name="txtPassword">
+   </div>
+
+ <button type="submit" id="btnSubmit" name="btnSubmit">Login</button>
+  </form>
+</main>
+</body>
+</html>
